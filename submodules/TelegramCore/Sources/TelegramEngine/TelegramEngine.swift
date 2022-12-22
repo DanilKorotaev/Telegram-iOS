@@ -91,6 +91,10 @@ public final class TelegramEngine {
     public lazy var preferences: Preferences = {
         return Preferences(account: self.account)
     }()
+    
+    public lazy var callTime: CallTimeFetcher = {
+        return CallTimeFetcherImpl()
+    }()
 }
 
 public final class TelegramEngineUnauthorized {
